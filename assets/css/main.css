@@ -2685,4 +2685,24 @@ section,
   }
 }
 
+.portfolio-video {
+  width: 100%;
+  max-width: 700px;
+  height: 394px; /* altura default para desktop */
+  border-radius: 8px;
+}
+
+/* Para móviles: */
+@media (max-width: 768px) {
+  .portfolio-video {
+    height: 220px; /* ajusta este valor al que quieras */
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-video {
+    height: 180px; /* o el que mejor se vea en pantallas pequeñas */
+  }
+}
+
 
