@@ -1747,6 +1747,13 @@ section,
   transform: translateY(0);
 }
 
+.portfolio .portfolio-wrap .portfolio-info .category,
+.portfolio .portfolio-wrap .portfolio-info h4 {
+  color: #fff !important;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7),
+               0 0 6px rgba(0, 0, 0, 0.5);
+}
+
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
