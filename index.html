@@ -46,7 +46,7 @@
         <ul>
           <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Inicio</a></li>
           <li><a href="#about"><i class="bi bi-person navicon"></i>Sobre mi</a></li>
-          <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i>Trayectoria</a></li>
+          <li><a href="#trayectoria"><i class="bi bi-file-earmark-text navicon"></i>Trayectoria</a></li>
           <li><a href="#portfolio"><i class="bi bi-images navicon"></i>Trabajos</a></li>
           <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i>Servicios</a></li>
           </li>
@@ -202,21 +202,7 @@
                 </div>
               </div>
 
-              <div class="cta-section">
-                <a href="#" class="btn btn-primary">
-                  <i class="bi bi-download"></i>
-                  Descargar CV
-                </a>
-                <a href="#" class="btn btn-outline">
-                  <i class="bi bi-chat-dots"></i>
-                  Hablemos
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
+             
 
     </section><!-- /About Section -->
 
@@ -354,7 +340,7 @@
 
 
 <!-- Resume Section -->
-<section id="resume" class="resume section">
+<section id="trayectoria" class="resume section">
 
   <!-- Section Title -->
 <div class="container section-title" data-aos="fade-up">
@@ -578,10 +564,12 @@
             <div class="col-lg-3 filter-sidebar">
               <div class="filters-wrapper" data-aos="fade-right" data-aos-delay="150">
                 <ul class="portfolio-filters isotope-filters">
-  <li data-filter="*" class="filter-active">Todos los trabajos</li>
+<li class="filter-active">
+  <a href="/trabajos.html" style="text-decoration: none; color: inherit;">Todos los trabajos</a>
+</li>
   <li data-filter=".filter-apps">Apps</li>
   <li data-filter=".filter-ecommerce">E-Commerce</li>
-  <li data-filter=".filter-webcode">Web Code</li>
+  <li data-filter=".filter-webcode">100% Code</li>
   <li data-filter=".filter-wix">Wix</li>
   <li data-filter=".filter-wordpress">Wordpress</li>
 </ul>
@@ -602,21 +590,6 @@
         <h4>La Cuponera</h4>
         <div class="portfolio-links">
           <a href="/cuponera.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
- <!-- trabajo 2-->
-               <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-apps">
-  <div class="portfolio-wrap">
-    <img src="assets/img/portfolio/sanjose-app.jpg" class="img-fluid" alt="Portfolio Image" loading="lazy">
-    <div class="portfolio-info">
-      <div class="content">
-        <span class="category">Apps</span>
-        <h4>Sistema de Gestión San José</h4>
-        <div class="portfolio-links">
-          <a href="/app-sanjose.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
         </div>
       </div>
     </div>
@@ -742,22 +715,6 @@
   </div>
 </div>
 
- <!-- trabajo 10-->
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-apps">
-  <div class="portfolio-wrap">
-    <img src="assets/img/app-gestion.png" class="img-fluid" alt="Portfolio Image" loading="lazy">
-    <div class="portfolio-info">
-      <div class="content">
-        <span class="category">Apps</span>
-        <h4>MCLR - App de gestión de trabajos</h4>
-        <div class="portfolio-links">
-          <a href="/gestion-mclr.html" title="More Details"><i class="bi bi-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
  <!-- trabajo 11-->
 
@@ -787,6 +744,37 @@
 
     </section><!-- /Portfolio Section -->
 
+<div class="text-center mt-3">
+  <a href="/trabajos.html" class="btn ver-todos-btn">
+    Ver todos los trabajos
+  </a>
+</div>
+
+<style>
+ .ver-todos-btn {
+  color: #1DF9A0;
+  border: 2px solid #1DF9A0;
+  background-color: transparent;
+  width: 300px;             /* Ancho fijo */
+  padding: 0.4rem 1rem;     
+  font-weight: 600;
+  border-radius: 5px;       
+  display: inline-block;    
+  text-align: center;       /* Centra el texto */
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+  text-decoration: none;    
+}
+
+/* Hover: fondo verde y texto blanco */
+.ver-todos-btn:hover {
+  color: #ffffff;
+  background-color: #1DF9A0;
+  border-color: #1DF9A0;
+}
+
+
+</style>
+
 <!-- Sección de Servicios -->
 <section id="services" class="services section">
 
@@ -796,129 +784,96 @@
     <p>Soluciones integrales para el éxito de tu proyecto digital y marketing.</p>
   </div><!-- Fin título -->
 
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
+ <div class="container" data-aos="fade-up" data-aos-delay="100">
+  <div class="row justify-content-center">
 
-    <div class="row justify-content-center">
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-card position-relative z-1">
-          <div class="service-icon">
-            <i class="bi bi-clipboard-check"></i>
-          </div>
-          <a href="/cotizador-mclr.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-          <h3>
-            <a href="/cotizador-mclr.html">
-              Plan de <span>auditoría</span>
-            </a>
-          </h3>
-          <p>
-            Si tienes un proyecto en marcha y quieres una web adecuada para él, agenda una reunión a fin de revisar juntos las áreas de mejora y asegurar el camino que debemos recorrer para garantizar el éxito.
-          </p>
+    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+      <div class="service-card position-relative z-1">
+        <div class="service-icon">
+          <i class="bi bi-clipboard-check"></i>
         </div>
+        <h3>
+          Plan de <span>auditoría</span>
+        </h3>
+        <p>
+          Si tienes un proyecto en marcha y quieres una web adecuada para él, agenda una reunión a fin de revisar juntos las áreas de mejora y asegurar el camino que debemos recorrer para garantizar el éxito.
+        </p>
       </div>
+    </div>
 
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="service-card position-relative z-1">
-          <div class="service-icon">
-            <i class="bi bi-award"></i>
-          </div>
-          <a href="/cotizador-mclr.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-          <h3>
-            <a href="/cotizador-mclr.html">
-              Branding <span>institucional</span>
-            </a>
-          </h3>
-          <p>
-            Antes de comenzar con tu presencia online tu proyecto necesita una cara visible: Una identidad visual adecuada. De esta manera haremos que tu presencia en línea sea atractiva y llegues a tu público objetivo.
-          </p>
+    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+      <div class="service-card position-relative z-1">
+        <div class="service-icon">
+          <i class="bi bi-award"></i>
         </div>
+        <h3>
+          Branding <span>institucional</span>
+        </h3>
+        <p>
+          Antes de comenzar con tu presencia online tu proyecto necesita una cara visible: Una identidad visual adecuada. De esta manera haremos que tu presencia en línea sea atractiva y llegues a tu público objetivo.
+        </p>
       </div>
+    </div>
 
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="service-card position-relative z-1">
-          <div class="service-icon">
-            <i class="bi bi-laptop"></i>
-          </div>
-          <a href="/cotizador-mclr.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-          <h3>
-            <a href="/cotizador-mclr.html">
-              Diseño Web + <span>SEO</span>
-            </a>
-          </h3>
-          <p>
-            Un sitio único para tu proyecto o negocio. Mi objetivo es hacer que tu sitio web no solo se vea increíble, sino que también funcione de manera perfecta en todos los dispositivos. Con las técnicas SEO adecuadas, tu página se posicionará más alto en los resultados de búsqueda, lo que significará más visibilidad para tu negocio.
-          </p>
+    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+      <div class="service-card position-relative z-1">
+        <div class="service-icon">
+          <i class="bi bi-laptop"></i>
         </div>
+        <h3>
+          Diseño Web + <span>SEO</span>
+        </h3>
+        <p>
+          Un sitio único para tu proyecto o negocio. Mi objetivo es hacer que tu sitio web no solo se vea increíble, sino que también funcione de manera perfecta en todos los dispositivos. Con las técnicas SEO adecuadas, tu página se posicionará más alto en los resultados de búsqueda, lo que significará más visibilidad para tu negocio.
+        </p>
       </div>
+    </div>
 
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-        <div class="service-card position-relative z-1">
-          <div class="service-icon">
-            <i class="bi bi-people"></i>
-          </div>
-          <a href="/cotizador-mclr.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-          <h3>
-            <a href="/cotizador-mclr.html">
-              Plan de <span>tercerización</span>
-            </a>
-          </h3>
-          <p>
-            Si tienes una agencia de marketing o un estudio gráfico, este plan es perfecto para ti. Terceriza los proyectos de diseño web a un precio diferencial para cada uno de tus clientes conmigo.
-          </p>
+    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+      <div class="service-card position-relative z-1">
+        <div class="service-icon">
+          <i class="bi bi-people"></i>
         </div>
+        <h3>
+          Plan de <span>tercerización</span>
+        </h3>
+        <p>
+          Si tienes una agencia de marketing o un estudio gráfico, este plan es perfecto para ti. Terceriza los proyectos de diseño web a un precio diferencial para cada uno de tus clientes conmigo.
+        </p>
       </div>
+    </div>
 
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-        <div class="service-card position-relative z-1">
-          <div class="service-icon">
-            <i class="bi bi-tools"></i>
-          </div>
-          <a href="/cotizador-mclr.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-          <h3>
-            <a href="/cotizador-mclr.html">
-              Mantenimiento <span>mensual</span>
-            </a>
-          </h3>
-          <p>
-            ¿Tienes una web desarrollada pero presenta problemas que no sabes cómo resolver? En el servicio de mantenimiento mensual me aseguro que tu web funcione de manera correcta y óptima los 365 días del año.
-          </p>
+    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+      <div class="service-card position-relative z-1">
+        <div class="service-icon">
+          <i class="bi bi-tools"></i>
         </div>
+        <h3>
+          Mantenimiento <span>mensual</span>
+        </h3>
+        <p>
+          ¿Tienes una web desarrollada pero presenta problemas que no sabes cómo resolver? En el servicio de mantenimiento mensual me aseguro que tu web funcione de manera correcta y óptima los 365 días del año.
+        </p>
       </div>
+    </div>
 
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-        <div class="service-card position-relative z-1">
-          <div class="service-icon">
-            <i class="bi bi-mortarboard"></i>
-          </div>
-          <a href="/cotizador-mclr.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-          <h3>
-            <a href="/cotizador-mclr.html">
-              Capacitación en <span>autogestión</span>
-            </a>
-          </h3>
-          <p>
-            ¿Ya hemos trabajado juntos o tienes tu web terminada pero quieres aprender a gestionarla? Te enseño todo lo que necesites saber para manejarla tú mismo.
-          </p>
+    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+      <div class="service-card position-relative z-1">
+        <div class="service-icon">
+          <i class="bi bi-mortarboard"></i>
         </div>
+        <h3>
+          Capacitación en <span>autogestión</span>
+        </h3>
+        <p>
+          ¿Ya hemos trabajado juntos o tienes tu web terminada pero quieres aprender a gestionarla? Te enseño todo lo que necesites saber para manejarla tú mismo.
+        </p>
       </div>
-
     </div>
 
   </div>
+</div>
 
-</section><!-- /Sección de Servicios -->
 
 
 
@@ -1025,6 +980,20 @@
   <script src="assets/js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+<script>
+// Poner en index.html, al final del body
+window.onload = () => {
+  if (window.location.hash) {
+    const section = document.querySelector(window.location.hash);
+    if (section) {
+      // Scroll suave
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+};
+
+
+</script>
 </body>
 
 </html>
