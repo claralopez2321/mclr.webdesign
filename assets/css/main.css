@@ -373,39 +373,30 @@ h6 {
   text-align: center;
 }
 
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
+/* Contenedor del preloader */
 #preloader {
   position: fixed;
   inset: 0;
   z-index: 999999;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: var(--background-color);
   transition: all 0.6s ease-out;
 }
 
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #ffffff;
-  border-color: var(--accent-color) transparent var(--accent-color) transparent;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: animate-preloader 1.5s linear infinite;
+/* Logo animado */
+#preloader .preloader-logo {
+  width: 80px; /* tamaño del logo */
+  height: 80px;
+  animation: spin-bounce 1.5s infinite;
 }
 
-@keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+/* Animación: gira y rebota un poco */
+@keyframes spin-bounce {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.2); }
+  100% { transform: rotate(360deg) scale(1); }
 }
 
 /*--------------------------------------------------------------

@@ -1,6 +1,14 @@
+// Detectar la página actual
+const currentPage = window.location.pathname.split('/').pop(); // ej: 'trabajos.html'
+
 // Ítems del menú
 const menuItems = [
-  { href: '/index.html', icon: 'bi bi-arrow-left', text: 'Inicio' } // Flecha hacia index
+  { 
+    // Si estamos en trabajos.html, la flecha va al index, si no, mantiene href normal
+    href: currentPage === 'trabajos.html' ? '/index.html' : '/trabajos.html', 
+    icon: 'bi bi-arrow-left', 
+    text: 'Inicio' 
+  }
 ];
 
 // Enlaces sociales
@@ -22,7 +30,7 @@ function createCircleLink(href, iconClass, target = '_self') {
   a.style.height = '50px';
   a.style.borderRadius = '50%';
   a.style.backgroundColor = '#1DF9A0'; // Fondo verde
-  a.style.color = '#0c0b0bff'; // Icono blanco
+  a.style.color = '#0c0b0bff'; // Icono negro
   a.style.textDecoration = 'none';
   a.style.fontSize = '24px';
   a.style.transition = 'transform 0.2s';
@@ -42,7 +50,7 @@ function createNavMenu(containerId) {
   nav.style.alignItems = 'center';
   nav.style.gap = '20px';
 
-  // Botón "Inicio" que ahora sí va al index.html
+  // Botón "Inicio" dinámico según la página
   nav.appendChild(createCircleLink(menuItems[0].href, menuItems[0].icon, '_self'));
 
   // Enlaces sociales
