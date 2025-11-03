@@ -3,6 +3,7 @@ const currentPage = window.location.pathname.split('/').pop(); // ej: 'trabajos.
 
 // Ítems del menú
 const menuItems = [
+  { href: '/index.html', icon: 'bi bi-house-fill', text: 'Home' }, // Ícono de casita
   { 
     // Si estamos en trabajos.html, la flecha va al index, si no, mantiene href normal
     href: currentPage === 'trabajos.html' ? '/index.html' : '/trabajos.html', 
@@ -11,15 +12,14 @@ const menuItems = [
   }
 ];
 
-// Enlaces sociales
+// Enlaces sociales (sin Behance)
 const socialLinks = [
-  { href: 'https://www.behance.net/lopezrosasclaraDG', icon: 'bi bi-behance', target: '_blank' },
   { href: 'https://www.linkedin.com/in/clara-lopez-rosas/', icon: 'bi bi-linkedin', target: '_blank' },
   { href: 'https://wa.link/qhw9gc', icon: 'bi bi-whatsapp', target: '_blank' }
 ];
 
 // Función para crear círculos con iconos centrados
-function createCircleLink(href, iconClass, target = '_self') {
+function createCircleLink(href, iconClass, bgColor, target = '_self') {
   const a = document.createElement('a');
   a.href = href;
   a.target = target;
@@ -29,12 +29,14 @@ function createCircleLink(href, iconClass, target = '_self') {
   a.style.width = '50px';
   a.style.height = '50px';
   a.style.borderRadius = '50%';
-  a.style.backgroundColor = '#1DF9A0'; // Fondo verde
+  a.style.backgroundColor = bgColor; // Color de fondo dinámico
   a.style.color = '#0c0b0bff'; // Icono negro
   a.style.textDecoration = 'none';
   a.style.fontSize = '24px';
   a.style.transition = 'transform 0.2s';
   a.innerHTML = `<i class="${iconClass}"></i>`;
+  a.addEventListener('mouseover', () => a.style.transform = 'scale(1.1)');
+  a.addEventListener('mouseout', () => a.style.transform = 'scale(1)');
   return a;
 }
 
@@ -50,10 +52,13 @@ function createNavMenu(containerId) {
   nav.style.alignItems = 'center';
   nav.style.gap = '20px';
 
-  // Botón "Inicio" dinámico según la página
-  nav.appendChild(createCircleLink(menuItems[0].href, menuItems[0].icon, '_self'));
+  // Botón "Home" con ícono de casita (verde)
+  nav.appendChild(createCircleLink(menuItems[0].href, menuItems[0].icon, '#1DF9A0', '_self'));
 
-  // Enlaces sociales
+  // Botón "Inicio" dinámico con flecha (verde)
+  nav.appendChild(createCircleLink(menuItems[1].href, menuItems[1].icon, '#1DF9A0', '_self'));
+
+  // Enlaces sociales (amarillos)
   const socialDiv = document.createElement('div');
   socialDiv.style.display = 'flex';
   socialDiv.style.flexDirection = 'column';
@@ -62,7 +67,7 @@ function createNavMenu(containerId) {
   socialDiv.style.marginTop = '10px';
 
   socialLinks.forEach(link => {
-    const a = createCircleLink(link.href, link.icon, link.target);
+    const a = createCircleLink(link.href, link.icon, '#FFD43B', link.target);
     socialDiv.appendChild(a);
   });
 
