@@ -500,13 +500,25 @@
         <div class="resume-section" data-aos="fade-up" data-aos-delay="100">
           <h3><i class="bi bi-mortarboard me-2"></i>Educación</h3>
 
-          <div class="resume-item">
-            <h4>Licenciatura en Diseño de la Comunicación Visual</h4>
-            <h5>2019</h5>
-            <p class="company"><i class="bi bi-building"></i> Universidad Nacional del Litoral</p>
-            <p>Duración de la carrera: 6 años.</p>
-          </div>
-        </div>
+    <div class="resume-item">
+  <h4>Licenciatura en Diseño de la Comunicación Visual</h4>
+  <h5>2019</h5>
+  <p class="company">
+    <i class="bi bi-building"></i> Universidad Nacional del Litoral
+  </p>
+  <p>Duración de la carrera: 6 años.</p>
+
+  <button class="btn btn-warning mt-2" onclick="openDiploma()">
+    Ver diploma
+  </button>
+</div>
+
+<!-- MODAL -->
+<div id="diplomaModal" class="modal-img">
+  <span class="close-modal" onclick="closeDiploma()">&times;</span>
+  <img src="./assets/img/diploma.png" alt="Diploma">
+</div>
+
 
       <!-- Certifications Section -->
 <div class="resume-section" data-aos="fade-up" data-aos-delay="200">
@@ -527,11 +539,26 @@
   </div>
 
   <div class="resume-item">
-    <h4>Carrera de Desarrollo Frontend (HTML, CSS, JavaScript, React)</h4>
-    <h5>2023</h5>
-    <p class="company"><i class="bi bi-building"></i> Instituto Coderhouse</p>
-    <p>Duración del curso: 7 meses.</p>
+  <h4>Carrera de Desarrollo Frontend (HTML, CSS, JavaScript, React)</h4>
+  <h5>2023</h5>
+  <p class="company">
+    <i class="bi bi-building"></i> Instituto Coderhouse
+  </p>
+  <p>Duración del curso: 6 meses.</p>
+
+  <button
+    class="btn btn-warning mt-2"
+    onclick="openCertificate('./assets/img/certificado_coder.jpg')"
+  >
+    Ver certificado
+  </button>
+
+   <div id="certificateModal" class="modal-img" onclick="closeCertificate()">
+    <span class="close-modal" onclick="event.stopPropagation(); closeCertificate()">&times;</span>
+    <img id="certificateImage" src="" alt="Certificado" onclick="event.stopPropagation()">
   </div>
+</div>
+
 
   <!-- Nueva certificación -->
   <div class="resume-item">
@@ -997,6 +1024,51 @@ window.onload = () => {
 
 
 </script>
+
+<script>
+  function openDiploma() {
+    const modal = document.getElementById("diplomaModal");
+    modal.style.display = "flex";
+
+    // Forzamos reflow para que la animación se ejecute
+    modal.offsetHeight;
+
+    modal.classList.add("active");
+  }
+
+  function closeDiploma() {
+    const modal = document.getElementById("diplomaModal");
+    modal.classList.remove("active");
+
+    setTimeout(() => {
+      modal.style.display = "none";
+    }, 350);
+  }
+
+  
+</script>
+
+<script>
+    function openCertificate(imageSrc) {
+      const modal = document.getElementById("certificateModal");
+      const image = document.getElementById("certificateImage");
+
+      image.src = imageSrc;
+      modal.style.display = "flex";
+      modal.offsetHeight; // fuerza animación
+      modal.classList.add("active");
+    }
+
+    function closeCertificate() {
+      const modal = document.getElementById("certificateModal");
+      modal.classList.remove("active");
+
+      setTimeout(() => {
+        modal.style.display = "none";
+      }, 350);
+    }
+  </script>
+
 </body>
 
 </html>
