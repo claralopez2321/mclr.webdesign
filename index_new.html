@@ -8,7 +8,11 @@
 
   <!-- Google Font: Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
- <!-- Main CSS File -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+
+  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
@@ -35,7 +39,7 @@
         120deg,
         #1EF9A0,
         #FFDE00,
-        #f6faf8
+        hsl(150, 29%, 97%)
       );
       background-size: 300% 300%;
       animation: gradientMove 8s ease infinite;
@@ -195,19 +199,17 @@
 
   <!-- COLUMNA TEXTO -->
   <div class="hero-text">
-    <h1>
-      Soy Clara,<br>
-      <span>Front-end Developer</span>
-    </h1>
+  <h1>
+    Soy Clara,<br>
+    <span id="typing"></span>
+  </h1>
 
-    <p>
-      Me especializo en diseño y desarrollo web, combinándolos para crear
-      experiencias digitales únicas. Diseño y ejecuto soluciones personalizadas
-      que reflejen la esencia de tu empresa y potencien tu negocio en el mundo online.
-    </p>
-  </div>
-
+  <p>
+    Me especializo en diseño y desarrollo web, combinándolos para crear
+    experiencias digitales únicas. 
+  </p>
 </div>
+
 
 
     <!-- MENÚ INFERIOR -->
@@ -246,7 +248,7 @@
 
       switch (type) {
         case 1:
-          gradient = "linear-gradient(120deg, #1EF9A0, #FFDE00, #000000, #1EF9A0)";
+gradient = "linear-gradient(120deg, #1EF9A0, #FFDE00, #FFFFFF, #1EF9A0)";
           break;
         case 2:
           gradient = "linear-gradient(120deg, #00c6ff, #0072ff, #ffffff, #00c6ff)";
@@ -271,6 +273,42 @@
     menu.classList.toggle('active');
   });
 </script>
+
+<script>
+  const words = [
+    { text: "Diseñadora Gráfica", class: "typing-script" },
+    { text: "Front-end Developer", class: "typing-tech" }
+  ];
+
+  const typingElement = document.getElementById("typing");
+
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function typeEffect() {
+    const current = words[wordIndex];
+    typingElement.className = current.class;
+
+    if (!isDeleting) {
+      typingElement.textContent = current.text.substring(0, charIndex++);
+      if (charIndex > current.text.length) {
+        setTimeout(() => isDeleting = true, 1200);
+      }
+    } else {
+      typingElement.textContent = current.text.substring(0, charIndex--);
+      if (charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+      }
+    }
+
+    setTimeout(typeEffect, isDeleting ? 60 : 100);
+  }
+
+  typeEffect();
+</script>
+
 
 
 </body>
