@@ -68,57 +68,132 @@
     <!-- Hero Section -->
 <section id="hero" class="hero section">
 
-  <div class="background-elements">
-    <div class="bg-circle circle-1"></div>
-    <div class="bg-circle circle-2"></div>
-  </div>
+  <div class="background-elements"></div>
 
   <div class="hero-content">
     <div class="container">
       <div class="row align-items-center">
 
+        <!-- TEXTO -->
         <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-          <div class="hero-text">
-            <img src="assets/img/person/logo-16.png" alt="Logo MCLR" class="logo-bounce" style="max-width: 250px; height: auto; margin-bottom: 20px;">
 
-            <p class="lead">Soy Clara, 
-              <span class="typed" data-typed-items="Diseñadora Gráfica, Front-end Developer, Diseñadora UX-UI"></span>
+          <div class="hero-text">
+
+            <img
+              src="assets/img/person/logo-16.png"
+              alt="Logo MCLR"
+              class="logo-bounce"
+              style="max-width:250px;height:auto;margin-bottom:20px;"
+            >
+
+            <div class="hero-badge">
+              ✦ Diseñadora & Front-end Developer
+            </div>
+
+            <p class="lead">
+              Soy Clara,
+              <span
+                class="typed"
+                data-typed-items="Diseñadora Gráfica, Front-end Developer, Diseñadora UX-UI">
+              </span>
             </p>
+
             <p class="description">
-              Me especializo en diseño y desarrollo web, combinándolos para crear experiencias digitales únicas. 
-              Diseño y ejecuto soluciones personalizadas que reflejen la esencia de tu empresa y potencien tu negocio en el mundo online.
+              Me especializo en diseño y desarrollo web, combinándolos para crear
+              experiencias digitales únicas. Diseño y ejecuto soluciones
+              personalizadas que reflejan la esencia de tu empresa y potencian tu
+              negocio en el mundo online.
             </p>
 
             <div class="hero-actions">
-              <a href="#portfolio" class="btn btn-primary">Mi trabajo</a>
-              <a href="#services" class="btn btn-outline">Servicios</a>
+              <a href="#portfolio" class="btn btn-primary">
+                Mi trabajo
+              </a>
+
+              <a href="#services" class="btn btn-outline text-white">
+                Servicios
+              </a>
             </div>
 
-            <div class="social-links">
-              <a href="https://www.behance.net/lopezrosasclaraDG" target="_blank"><i class="bi bi-behance"></i></a>
-              <a href="https://vimeo.com/mclrwebdesign" target="_blank"><i class="bi bi-vimeo"></i></a>
-              <a href="https://www.linkedin.com/in/clara-lopez-rosas/" target="_blank"><i class="bi bi-linkedin"></i></a>
-              <a href="https://wa.link/qhw9gc" target="_blank"><i class="bi bi-whatsapp"></i></a>
-            </div>
-          </div>
-        </div>
+            <div class="hero-stats">
 
-        <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-          <div class="hero-visual">
-            <div class="profile-container">
-              <div class=""></div>
-              <img src="assets/img/person/mclr-hero-18.png" alt="Clara López Rosas" class="profile-image">
-              <div class="floating-elements">
+              <div class="stat-item">
+                <span>+50</span>
+                <small>Proyectos</small>
               </div>
+
+              <div class="stat-item">
+                <span>8+</span>
+                <small>Años</small>
+              </div>
+
+              <div class="stat-item">
+                <span>100%</span>
+                <small>Compromiso</small>
+              </div>
+
             </div>
+
+            
           </div>
+
         </div>
+
+        <!-- VISUAL -->
+        <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+
+          <div class="hero-visual">
+
+            <div class="workspace-container">
+
+              <!-- CARD UX -->
+              <div class="skill-card skill-ux text-black">
+                <i class="bi bi-vector-pen"></i>
+                <span>UX/UI</span>
+              </div>
+
+              <!-- CARD FRONTEND -->
+              <div class="skill-card skill-code text-black">
+                <i class="bi bi-code-slash"></i>
+                <span>Front-End</span>
+              </div>
+
+              <!-- CARD BRANDING -->
+              <div class="skill-card skill-branding text-black">
+                <i class="bi bi-palette"></i>
+                <span>Branding</span>
+              </div>
+
+              <!-- CARD WORDPRESS -->
+              <div class="skill-card skill-wp text-black">
+                <i class="bi bi-wordpress"></i>
+                <span>WordPress</span>
+              </div>
+
+              <!-- FOTO / ILUSTRACIÓN -->
+              <div class="profile-frame">
+
+                <img
+                  src="assets/img/person/mclr-hero-18.png"
+                  alt="Clara López Rosas"
+                  class="profile-image"
+                >
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+        <!-- /VISUAL -->
 
       </div>
     </div>
   </div>
 
-</section><!-- /Hero Section -->
+</section>
+<!-- /Hero Section -->
 
 
     <!-- About Section -->
@@ -1070,6 +1145,56 @@ window.onload = () => {
       }, 350);
     }
   </script>
+<div class="mclr-cursor">
+  <img src="assets/img/cursor-24.png" alt="MCLR">
+</div>
+
+<script>
+
+const cursor = document.querySelector('.mclr-cursor');
+
+let mouseX = 0;
+let mouseY = 0;
+
+let currentX = 0;
+let currentY = 0;
+
+document.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+function animateCursor(){
+
+  currentX += (mouseX - currentX) * 0.15;
+  currentY += (mouseY - currentY) * 0.15;
+
+  cursor.style.left = currentX + 'px';
+  cursor.style.top = currentY + 'px';
+
+  requestAnimationFrame(animateCursor);
+}
+
+animateCursor();
+const hoverTargets = document.querySelectorAll(
+  'a, button, .btn, .portfolio-item'
+);
+
+hoverTargets.forEach(item => {
+
+  item.addEventListener('mouseenter', () => {
+    cursor.style.transform =
+      'translate(-50%, -50%) scale(1.4)';
+  });
+
+  item.addEventListener('mouseleave', () => {
+    cursor.style.transform =
+      'translate(-50%, -50%) scale(1)';
+  });
+
+});
+
+</script>
 
 </body>
 
