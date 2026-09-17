@@ -56,7 +56,7 @@
 
       <div class="social-links text-center">
               <a href="https://www.behance.net/lopezrosasclaraDG" target="_blank"><i class="bi bi-behance"></i></a>
-              <a href="https://vimeo.com/mclrwebdesign" target="_blank"><i class="bi bi-vimeo"></i></a>
+              <a href="#portfolio"><i class="bi bi-briefcase-fill"></i></a>
               <a href="https://www.linkedin.com/in/clara-lopez-rosas/" target="_blank"><i class="bi bi-linkedin"></i></a>
               <a href="https://wa.link/qhw9gc" target="_blank"><i class="bi bi-whatsapp"></i></a>
       </div>
@@ -668,9 +668,26 @@
             <div class="col-lg-3 filter-sidebar">
               <div class="filters-wrapper" data-aos="fade-right" data-aos-delay="150">
                 <ul class="portfolio-filters isotope-filters">
-<li class="filter-active">
-  <a href="/trabajos.html" style="text-decoration: none; color: inherit;">Todos los trabajos</a>
+<li class="filter-active" style="background: transparent !important; border-left: none !important;">
+  <a href="/trabajos.html" style="text-decoration: none; color: #111111; background: #f6c944; border: 1px solid #f6c944; border-radius: 8px; padding: 0.55rem 0.9rem; display: inline-block; font-weight: 400; animation: floatingWorkBtn 1.2s ease-in-out infinite; transition: transform 0.25s ease, filter 0.25s ease;">Ver todos los trabajos</a>
 </li>
+
+<style>
+@keyframes floatingWorkBtn {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  25% {
+    transform: translateY(-4px) scale(1.03);
+  }
+  50% {
+    transform: translateY(-6px) scale(1.05);
+  }
+  75% {
+    transform: translateY(-4px) scale(1.03);
+  }
+}
+</style>
   <li data-filter=".filter-apps">Apps</li>
   <li data-filter=".filter-ecommerce">E-Commerce</li>
   <li data-filter=".filter-webcode">100% Code</li>
